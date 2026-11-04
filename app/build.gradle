@@ -1,0 +1,10 @@
+plugins { id 'com.android.application' }
+def appVersion = new Properties()
+rootProject.file('version.properties').withInputStream { appVersion.load(it) }
+android {
+    namespace 'local.offline.clicker'
+    compileSdk 34
+    defaultConfig { applicationId 'local.offline.clicker'; minSdk 24; targetSdk 34; versionCode appVersion.versionCode.toInteger(); versionName appVersion.versionName }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+    buildTypes { release { minifyEnabled false } }
+}
