@@ -1,0 +1,10 @@
+build/
+app/build/
+.gradle/
+.idea/
+local.properties
+signing/
+*.iml
+__pycache__/
+build-log.txt
+verification/
